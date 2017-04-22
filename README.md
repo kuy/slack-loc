@@ -9,8 +9,21 @@ Update Slack status based on your location (using Wi-Fi SSID).
 - Bash
 - curl
 
+### Linux?
 
-## Configuration
+I'm waiting your [PR](https://github.com/kuy/slack-loc/pulls) :)
+
+
+## Installation
+
+### 1. Download
+
+```
+git clone https://github.com/kuy/slack-loc.git
+cd slack-loc
+```
+
+### 2. Configure
 
 Create `scripts/config.sh` from `scripts/config.sh.example`.
 
@@ -19,32 +32,32 @@ Create `scripts/config.sh` from `scripts/config.sh.example`.
 - `EMOJI_*`: Emoji notation.
 - `TEXT_*`: Status text.
 
-### Get your "Legacy" token
+#### Get your "Legacy" token
 
 Here:
 [https://api.slack.com/custom-integrations/legacy-tokens](https://api.slack.com/custom-integrations/legacy-tokens)
 
 If you don't have a token, [create new app](https://api.slack.com/apps) for an integration.
 
+### 3. Enable
 
-## Enable/Disable a periodic task with `launchd` on macOS
+```
+./macos/enable.sh
+```
 
-NOTE: Both commands should be executed from the project root.
 
-### Enable
+## Uninstall
 
-`./macos/enable.sh`
-
-### Disable
-
-`./macos/disable.sh`
+```
+./macos/disable.sh
+```
 
 
 ## Trouble Shooting
 
 ### Doesn't working
 
-Disable launchd job, append below lines, and re-enable it.
+Disable the job, append below lines, and re-enable it.
 
 ```
 <key>StandardOutPath</key>
@@ -54,3 +67,13 @@ Disable launchd job, append below lines, and re-enable it.
 ```
 
 Please post error message to [GitHub issue](https://github.com/kuy/slack-loc/issues).
+
+
+## License
+
+MIT
+
+
+## Author
+
+Yuki Kodama / [@kuy](https://twitter.com/kuy)
