@@ -2,11 +2,13 @@
 
 Update Slack status based on your location (using Wi-Fi SSID).
 
+
 ## Requirements
 
 - macOS 10.12 Sierra
 - Bash
 - curl
+
 
 ## Configuration
 
@@ -22,10 +24,12 @@ Create `scripts/config.sh` from `scripts/config.sh.example`.
 Here:
 [https://api.slack.com/custom-integrations/legacy-tokens](https://api.slack.com/custom-integrations/legacy-tokens)
 
-If you don't have a token, create app for integration.
-- [https://api.slack.com/apps](https://api.slack.com/apps)
+If you don't have a token, [create new app](https://api.slack.com/apps) for an integration.
 
-## Enable/Disable periodic task with `launchd` on macOS
+
+## Enable/Disable a periodic task with `launchd` on macOS
+
+NOTE: Both commands should be executed from the project root.
 
 ### Enable
 
@@ -35,11 +39,12 @@ If you don't have a token, create app for integration.
 
 `./macos/disable.sh`
 
+
 ## Trouble Shooting
 
 ### Doesn't working
 
-Disable launchd job, append below lines, and enable launchd.
+Disable launchd job, append below lines, and re-enable it.
 
 ```
 <key>StandardOutPath</key>
