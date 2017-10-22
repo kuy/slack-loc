@@ -1,9 +1,7 @@
-TOKEN="LEGACY SLACK TOKEN"
+# define multiple tokens of stati to update (space delineated)
+declare -a TOKENS=("TOKEN1" "TOKEN2")
 
-EMOJI_OFFICE=":office:"
-EMOJI_HOME=":house:"
+DEFAULT_EMOJI=":smile:"
+DEFAULT_STATUS="default status"
 
-TEXT_OFFICE="office"
-TEXT_HOME="home"
 
-OFFICE="SSID OF YOUR OFFICE"
