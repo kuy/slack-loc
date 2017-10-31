@@ -25,12 +25,16 @@ cd slack-loc
 
 ### 2. Configure
 
-Create `scripts/config.sh` from `scripts/config.sh.example`.
+Create `scripts/config.sh` from `scripts/config.sh.example` and `known_ssids` from `known_ssids.example`.
 
-- `TOKEN`: Slack API token. See below.
-- `OFFICE`: Wi-Fi SSID of your work place.
-- `EMOJI_*`: Emoji notation.
-- `TEXT_*`: Status text.
+- `TOKENS`: Bash array of all Slack API tokens. See below.
+- `DEFAULT_EMOJI`: Slack status emoji when no known Wi-Fi SSID can be found
+- `DEFAULT_STATUS`: Slack status text when no known Wi-Fi SSID can be found
+- The `known_ssids` file is a semi-colon seperated value file of the format:
+	- Note: remember Slack-emoji-codes are surrounded in colons
+```
+SSID;EMOJI_CODE;STATUS_TEXT
+```
 
 #### Get your "Legacy" token
 
@@ -44,7 +48,6 @@ If you don't have a token, [create new app](https://api.slack.com/apps) for an i
 ```
 ./macos/enable.sh
 ```
-
 
 ## Uninstall
 
